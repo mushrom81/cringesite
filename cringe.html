@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            canvas {
+                border: 0px solid black;
+                display: block;
+            }
+
+            button {
+                padding: 1px;
+                padding-left: 40px;
+                padding-right: 40px;
+
+            }
+
+            #quality {
+                width: 96px;
+            }
+
+            #controls {
+                visibility: hidden;
+                position: fixed;
+                bottom: 0;
+                color: aliceblue;
+                background-color: #333333;
+                padding: 5px;
+                border-top-right-radius: 5px;
+            }
+
+            *:hover #controls {
+                visibility: visible;
+            }
+
+            #container   {
+                width: 100%;
+                text-align: center;
+                overflow: hidden;
+            }
+            
+        </style>
+        <title>The Metamorphisis</title>
+    </head>
+    <body>
+        <div id="container">
+            <canvas>Your browser doesn't support canvas.</canvas>
+        </div>
+        <div id="controls">
+            <audio controls autoplay loop>
+                <source src="cringe.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div>
+                <input type="range" min="1" max="5" value="3" id="quality">
+                <input type="checkbox" id="autoloop">
+                <button onclick="metamorph()">Metamorph</button>
+            </div>
+        </div>
+        <script src="cringe.js"></script>
+    </body>
+</html>
